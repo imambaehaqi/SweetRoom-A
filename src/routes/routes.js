@@ -15,6 +15,9 @@ import MenuScreen from '../screens/TabScreen/MenuScreen'
 import ChatScreen from '../screens/TabScreen/ChatScreen'
 import SettingScreen from '../screens/TabScreen/SettingScreen'
 
+import FormAddHotel from '../components/FormAddHotel'
+import DetailScreen from '../screens/DetailScreen'
+
 const AuthStack = createStackNavigator({
     Splash: { screen: SplashScreen },
     Login: { screen: LoginScreen },
@@ -85,9 +88,21 @@ const MainStack = createStackNavigator({
     Main: { screen: MainTabs },
 })
 
+const MenuStack = createStackNavigator({
+    Main: { screen: MainTabs },
+    FormAddHotel: { screen: FormAddHotel }
+})
+
+const DetailStack = createStackNavigator({
+    Main: { screen: MainTabs },
+    Detail: { screen: DetailScreen },
+})
+
 const AppNavigation = createSwitchNavigator({
     InitAuth: { screen: AuthStack },
-    InitMain: { screen: MainStack}
+    InitMain: { screen: MainStack},
+    InitMenu: { screen: MenuStack},
+    InitDetail: { screen: DetailStack }
 })
 
 export default createAppContainer( AppNavigation )
