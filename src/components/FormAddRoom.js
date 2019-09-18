@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Container, Content, Form, Item, Input } from "native-base"
+import { Container, Header, Content, Form, Item, Input } from "native-base"
 
 export default class FormExample extends Component {
     static navigationOptions = {
-        title: 'Attachment New Hotel', 
+        title: 'Attachment New Room', 
         /* No more header config here! */
     }
 

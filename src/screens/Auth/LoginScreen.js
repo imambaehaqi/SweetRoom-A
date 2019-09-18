@@ -7,10 +7,12 @@ export class LoginScreen extends Component {
     render() {
         return (
             <Container>
-                <Header style = {{backgroundColor: 'white'}}>
+                <Header style = {{backgroundColor:'white'}}>
                     <Body>
                         <Title>
-                            <Text style = {{fontWeight:'bold'}}>PARTNER</Text>
+                            <Text style = {{fontWeight:'bold'}}>
+                                PARTNER
+                            </Text>
                         </Title>
                     </Body>
                 </Header>
@@ -27,7 +29,9 @@ export class LoginScreen extends Component {
                         </Item>
                     </Form>
                     <Container style = {{paddingTop:20}} >
-                        <Button block danger
+                        <Button 
+                            style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
+                            active={false}
                             onPress={ () => this.props.navigation.navigate('InitMain') }
                         >
                             <Text>LOGIN</Text>
@@ -35,7 +39,8 @@ export class LoginScreen extends Component {
                         <Text style = {{fontWeight:'bold', textAlign:'center', padding:10, fontSize:20}}>
                             Or
                         </Text>
-                        <Button block danger
+                        <Button 
+                            style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
                             onPress={ () => this.props.navigation.push('Register') }
                         >
                             <Text>REGISTER</Text>

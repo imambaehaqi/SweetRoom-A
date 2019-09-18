@@ -8,10 +8,7 @@ import { Container } from 'native-base'
 export class SplashScreen extends Component {
     performTimeConsumingTask = async() => {
         return new Promise((resolve) =>
-            setTimeout(
-            () => { resolve('result') },
-            2000
-            )
+            setTimeout(() => { resolve('result') },2000)
         )
     }
 

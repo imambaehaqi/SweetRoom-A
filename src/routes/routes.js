@@ -16,16 +16,29 @@ import ChatScreen from '../screens/TabScreen/ChatScreen'
 import SettingScreen from '../screens/TabScreen/SettingScreen'
 
 import FormAddHotel from '../components/FormAddHotel'
-import DetailScreen from '../screens/DetailScreen'
+import FormAddRoom from '../components/FormAddRoom'
+import DetailHotel from '../screens/DetailHotel'
+import DetailRoom from '../screens/DetailRoom'
 
 const AuthStack = createStackNavigator({
-    Splash: { screen: SplashScreen },
-    Login: { screen: LoginScreen },
+    Splash: { screen: SplashScreen,
+        navigationOptions: () => ({
+            header: null
+        })
+    },
+    Login: { screen: LoginScreen,
+        navigationOptions: () => ({
+            header: null
+        })
+    },
     Register: { screen: RegisterScreen },
 },{
+    initialRouteName: 'Splash',
     defaultNavigationOptions: {
-        header: null
-      }
+        headerTitleStyle: {
+            fontWeight: 'bold'
+        }
+    }
 })
 
 const MainTabs = createBottomTabNavigator({
@@ -35,7 +48,7 @@ const MainTabs = createBottomTabNavigator({
             tabBarIcon: ({ tintColor }) => (
                 <Icon type = 'AntDesign' name = 'search1' style = {{fontSize: 22, color:`${tintColor}`}} />
             ),
-            title: 'Order'
+            title: 'Order',
         }
     },
     Payment: {
@@ -53,7 +66,7 @@ const MainTabs = createBottomTabNavigator({
             tabBarIcon: ({ tintColor }) => (
                 <Icon type = 'AntDesign' name = 'search1' style = {{fontSize: 22, color:`${tintColor}`}} />
             ),
-            title: 'Menu'
+            title: 'Menu',
         }
     },
     Chat: {
@@ -75,34 +88,31 @@ const MainTabs = createBottomTabNavigator({
         }
     },
 },{
+    initialRouteName: 'Menu',
     tabBarOptions: {
         activeTintColor: '#fbda91',
         inactiveTintColor: 'white',
         activeBackgroundColor: '#fb8691',
         inactiveBackgroundColor: '#fb8691',
-        borderTopWidth: 0,
+        borderTopWidth: 0
     }
 })
 
 const MainStack = createStackNavigator({
-    Main: { screen: MainTabs },
-})
-
-const MenuStack = createStackNavigator({
-    Main: { screen: MainTabs },
-    FormAddHotel: { screen: FormAddHotel }
-})
-
-const DetailStack = createStackNavigator({
-    Main: { screen: MainTabs },
-    Detail: { screen: DetailScreen },
+    Main: { screen: MainTabs,
+        navigationOptions: () => ({
+            header: null
+        })
+    },
+    FormAddHotel: { screen: FormAddHotel },
+    DetailHotel: { screen: DetailHotel },
+    FormAddRoom: { screen: FormAddRoom },
+    DetailRoom: { screen: DetailRoom }
 })
 
 const AppNavigation = createSwitchNavigator({
     InitAuth: { screen: AuthStack },
-    InitMain: { screen: MainStack},
-    InitMenu: { screen: MenuStack},
-    InitDetail: { screen: DetailStack }
+    InitMain: { screen: MainStack}
 })
 
 export default createAppContainer( AppNavigation )

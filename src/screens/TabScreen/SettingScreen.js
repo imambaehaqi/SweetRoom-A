@@ -1,12 +1,37 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Container, Header, Content, Card, CardItem, Text, Body, Title } from "native-base"
 
 export class SettingScreen extends Component {
+    
     render() {
         return (
-            <View>
-                <Text> textInComponent </Text>
-            </View>
+            <Container>
+                <Header style = {{backgroundColor:'white'}}>
+                    <Body>
+                        <Title>
+                            <Text style = {{fontWeight:'bold'}}>
+                                Setting
+                            </Text>
+                        </Title>
+                    </Body>
+                </Header>
+                <Content>
+                    <Card>
+                        <CardItem header>
+                            <Text>NativeBase</Text>
+                        </CardItem>
+                        <CardItem>
+                            <Body>
+                                <Text>
+                                </Text>
+                            </Body>
+                        </CardItem>
+                        <CardItem footer>
+                            <Text>GeekyAnts</Text>
+                        </CardItem>
+                    </Card>
+                </Content>
+            </Container>
         )
     }
 }
