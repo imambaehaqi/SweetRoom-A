@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
     containerAuthStack: {
         flex: 1,
         padding: 20
+    },
+    buttonContainer: {
+        backgroundColor: '#fb8691',
     }
 })
 

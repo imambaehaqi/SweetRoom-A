@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { View, Image } from 'react-native'
+
 import Styles from '../res/styles'
 
 export class IsAuth extends Component {

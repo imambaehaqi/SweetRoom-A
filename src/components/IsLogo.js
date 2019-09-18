@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Image, View } from 'react-native'
+
 import Styles from '../res/styles'
 
 export class IsLogo extends Component {

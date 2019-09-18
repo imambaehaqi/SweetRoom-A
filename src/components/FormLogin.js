@@ -1,31 +1,37 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput, Button } from 'react-native'
+import { Container, Button, Content, Item, Label, Form, Input, Text } from 'native-base'
 
 export class FormLogin extends Component {
     render() {
         return (
-            <View>
-                <TextInput
-                    style={{borderBottomWidth: 0.3}}
-                    placeholder="Email"
-                    keyboardType='email-address'
-                    // onChangeText={(text) => this.handleChange( 'email', text )}
-                />
-                <TextInput
-                    secureTextEntry = {true}
-                    style={{borderBottomWidth: 0.3}}
-                    placeholder="Password"
-                    // onChangeText={(text) => this.handleChange( 'password', text )}
-                />
-                <View style={{paddingTop:10}}>
-                    <View>
-                        <Button
-                            // type='submit' onPress={() => this.handleSubmit()}
-                            onPress={ () => this.props.navigation.navigate('InitMain') }
-                            title="Sign In"/>
-                    </View>
-                </View>
-            </View>
+            <Container>
+                <Form>
+                    <Item floatingLabel>
+                        <Label>Email Address</Label>
+                    <Input />
+                    </Item>
+                        <Item floatingLabel>
+                        <Label>Password</Label>
+                    <Input />
+                    </Item>
+                </Form>
+                <Container style = {{paddingTop:20}} >
+                    <Button block danger
+                        onPress={ () => this.props.navigation.navigate('InitMain') }
+                    >
+                        <Text>LOGIN</Text>
+                    </Button>
+                    <Text style = {{fontWeight:'bold', textAlign:'center', padding:10, fontSize:20}}>
+                        Or
+                    </Text>
+                    <Button block danger
+                        onPress={ () => this.props.navigation.push('Register') }
+                    >
+                        <Text>REGISTER</Text>
+                    </Button>
+                </Container>
+                <Text style = {{textAlign:'center', color:'gray', fontSize:9}}>©Team 2 || Bootcamp Arkademy || Batch 11</Text>
+            </Container>
         )
     }
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
 
 import Styles from '../../res/styles'
 
 import IsLogo from '../../components/IsLogo'
+import { Container } from 'native-base'
 
 export class SplashScreen extends Component {
     performTimeConsumingTask = async() => {
@@ -27,9 +27,9 @@ export class SplashScreen extends Component {
 
     render() {
         return (
-            <View style = {Styles.containerIsLoading}>
+            <Container style = {Styles.containerIsLoading}>
                 <IsLogo/>
-            </View>
+            </Container>
         )
     }
 }
