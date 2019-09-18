@@ -5,10 +5,9 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { createStackNavigator } from 'react-navigation-stack'
 
-import SplashScreen from '../screens/AuthScreen/SplashScreen'
-import LoginScreen from '../screens/AuthScreen/LoginScreen'
-import RegisterScreen from '../screens/AuthScreen/RegisterScreen'
-import AuthScreen from '../screens/AuthScreen/AuthScreen'
+import SplashScreen from '../screens/Auth/SplashScreen'
+import LoginScreen from '../screens/Auth/LoginScreen'
+import RegisterScreen from '../screens/Auth/RegisterScreen'
 
 import OrderScreen from '../screens/TabScreen/OrderScreen'
 import PaymentScreen from '../screens/TabScreen/PaymentScreen'
@@ -20,7 +19,6 @@ const AuthStack = createStackNavigator({
     Splash: { screen: SplashScreen },
     Login: { screen: LoginScreen },
     Register: { screen: RegisterScreen },
-    Auth: { screen: AuthScreen}
 },{
     defaultNavigationOptions: {
         header: null
