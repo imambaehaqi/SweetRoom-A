@@ -1,7 +1,19 @@
 import React, { Component } from 'react'
-import { Tabs, Tab, Text, TabHeading, Container, Body, Header, Title } from 'native-base'
+import { Tabs, Tab, Text, ListItem, Container, Body, Header, Title, Right } from 'native-base'
 
 export class OrderScreen extends Component {
+    state = {
+        curTime: null,
+    }
+
+    componentDidMount() {
+        setInterval( () => {
+            this.setState({
+            curTime : new Date().toLocaleString()
+            })
+        },1000)
+    }
+
     render() {
         return (
             <Container>
@@ -21,7 +33,24 @@ export class OrderScreen extends Component {
                         textStyle={{color: 'black'}} 
                         activeTabStyle={{backgroundColor: 'white'}} 
                         activeTextStyle={{color: 'black', fontWeight: 'normal'}}>
-                        <Text>tes</Text>
+                        <ListItem >
+                        <Body>
+                            <Text>User Order{}</Text>
+                            <Text note numberOfLines={1}>Rp. {}, Room Number{}</Text>
+                        </Body>
+                        <Right>
+                            <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
+                        </Right>
+                        </ListItem>
+                        <ListItem >
+                            <Body>
+                                <Text>User Order{}</Text>
+                                <Text note numberOfLines={1}>Rp. {}, Room Number{}</Text>
+                            </Body>
+                            <Right>
+                                <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
+                            </Right>
+                        </ListItem>
                     </Tab>
                     <Tab 
                         heading="Completed" 
@@ -29,7 +58,26 @@ export class OrderScreen extends Component {
                         textStyle={{color: 'black'}} 
                         activeTabStyle={{backgroundColor: 'white'}} 
                         activeTextStyle={{color: 'black', fontWeight: 'normal'}}>
-                        <Text>tes2</Text>
+                        <ListItem>
+                        <Body>
+                            <Text>User Order{}</Text>
+                            <Text note numberOfLines={1}>Rp. {}, Room Number{}</Text>
+                        </Body>
+                        <Right>
+                            <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
+                            <Text style={{fontSize:12}}>Status{}</Text>
+                        </Right>
+                        </ListItem>
+                        <ListItem>
+                            <Body>
+                                <Text>User Order{}</Text>
+                                <Text note numberOfLines={1}>Rp. {}, Room Number{}</Text>
+                            </Body>
+                            <Right>
+                                <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
+                                <Text style={{fontSize:12}}>Status{}</Text>
+                            </Right>
+                        </ListItem>
                     </Tab>
                 </Tabs>
             </Container>
