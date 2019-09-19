@@ -68,6 +68,19 @@ export class SettingScreen extends Component {
                                     switch1Value = {this.state.switch1Value}/>
                             </Right>
                         </ListItem>
+                        <ListItem thumbnail
+                            onPress={ () => this.props.navigation.push('FormHotel') }
+                        >
+                            <Left>
+                                <Icon type="FontAwesome5" name="hotel"/>
+                            </Left>
+                            <Body>
+                                <Text style = {{fontWeight:'bold', fontSize:16}}>Add Hotel</Text>
+                            </Body>
+                            <Right>
+                                <Icon type="Ionicons" name="ios-arrow-forward" />
+                            </Right>
+                        </ListItem>
                         <ListItem thumbnail>
                             <Left>
                                 <Icon type="FontAwesome" name="qrcode"/>
@@ -84,34 +97,6 @@ export class SettingScreen extends Component {
                     <TouchableOpacity onPress={() => this.logOut()}><Text style = {{textAlign:'center', paddingTop:25, color:'tomato', fontWeight:'bold'}}>LOGOUT</Text></TouchableOpacity>
                 </Content>
             </Container>
-            // <Container>
-            //     <Header style = {{backgroundColor:'white'}}>
-            //         <Body>
-            //             <Title>
-            //                 <Text style = {{fontWeight:'bold'}}>
-            //                     Setting
-            //                 </Text>
-            //             </Title>
-            //         </Body>
-            //     </Header>
-            //     <Content>
-            //         <Card>
-            //             <CardItem header>
-            //                 <Text>NativeBase</Text>
-            //             </CardItem>
-            //             <CardItem>
-            //                 <Body>
-            //                     <Text>
-            //                     </Text>
-            //                 </Body>
-            //             </CardItem>
-            //             <CardItem footer>
-            //                 <Text>GeekyAnts</Text>
-            //             </CardItem>
-            //         </Card>
-            //         <TouchableOpacity onPress={() => this.logOut()}><Text>Logout</Text></TouchableOpacity>
-            //     </Content>
-            // </Container>
         )
     }
 }

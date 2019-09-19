@@ -15,37 +15,37 @@ export class LoginScreen extends Component {
         }
     }
 
-    // handleForm = (type, value) => {
-    //     let newFormData = {...this.state.form}
-    //     newFormData[type] = value
-    //     if ( value.length > 1 ) {
-    //         this.setState({
-    //             form: newFormData,
-    //         })
-    //         if ( type == 'password') {
-    //             this.setState({
-    //                 send: true
-    //             })
-    //         }
-    //     }
-    //     if ( value.length < 1 ) { this.setState({ send: false })}
-    // }
+    handleForm = (type, value) => {
+        let newFormData = {...this.state.form}
+        newFormData[type] = value
+        if ( value.length > 1 ) {
+            this.setState({
+                form: newFormData,
+            })
+            if ( type == 'password') {
+                this.setState({
+                    send: true
+                })
+            }
+        }
+        if ( value.length < 1 ) { this.setState({ send: false })}
+    }
 
-    // submitForm = () => {
-    //     Axios.post('http://192.168.100.36:1010/user/login/', this.state.form)
-    //         .then( async (res) => {
-    //             console.warn(res)
-    //             if (res.data.status === 200){
-    //                 await AsyncStorage.setItem('token', res.data.accessToken)
-    //                 this.props.navigation.navigate('InitMain')
-    //             } else if (res.data.status === 402){
-    //                 console.warn('Wrong Password')
-    //             } else if (res.data.status === 401){
-    //                 console.warn('User Not Found')
-    //             }
-    //         })
-    //         .catch(err => console.warn(err))
-    // }
+    submitForm = () => {
+        Axios.post('http://192.168.100.36:1010/user/login/', this.state.form)
+            .then( async (res) => {
+                console.warn(res)
+                if (res.data.status === 200){
+                    await AsyncStorage.setItem('token', res.data.accessToken)
+                    this.props.navigation.navigate('InitMain')
+                } else if (res.data.status === 402){
+                    console.warn('Wrong Password')
+                } else if (res.data.status === 401){
+                    console.warn('User Not Found')
+                }
+            })
+            .catch(err => console.warn(err))
+    }
     
     render() {
         return (
@@ -76,8 +76,8 @@ export class LoginScreen extends Component {
                             <Button 
                                 style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
                                 active={false}
-                                // onPress={ () => this.submitForm()}
-                                onPress = {() => this.props.navigation.navigate('InitMain')}
+                                onPress={ () => this.submitForm()}
+                                // onPress = {() => this.props.navigation.navigate('InitMain')}
                             >
                                 <Text>LOGIN</Text>
                             </Button>

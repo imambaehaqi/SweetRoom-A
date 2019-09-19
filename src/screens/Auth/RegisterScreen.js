@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Text, Header, Title, Body, Form, Item, Input, Button, Label } from 'native-base'
+import { Container, Text, Form, Item, Input, Button, Label } from 'native-base'
 import Axios from 'axios'
 import AsyncStorage from '@react-native-community/async-storage'
 import { ScrollView, View } from 'react-native'
@@ -36,8 +36,9 @@ export class RegisterScreen extends Component {
     handleSubmit = () => {
         Axios.post('http://192.168.100.36:1010/user/mitra/', this.state.form)
             .then( async (res) => {
-                await AsyncStorage.setItem('token',  res.data.accessToken)
-                this.props.navigation.navigate('FormHotel')
+                await AsyncStorage.setItem('token', res.data.accessToken)
+                this.props.navigation.navigate('InitMain')
+                console.warn(res.data)
             })
             .catch(err => console.warn(err))
     }
@@ -71,8 +72,8 @@ export class RegisterScreen extends Component {
                         <View style = {{paddingTop:20}}>
                             <Button
                                 style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
-                                // onPress={ () => this.handleSubmit()}
-                                onPress = { () => this.props.navigation.replace('FormHotel')}
+                                onPress={ () => this.handleSubmit()}
+                                // onPress = { () => this.props.navigation.replace('FormHotel')}
                             >
                                 <Text>REGISTER</Text>
                             </Button>

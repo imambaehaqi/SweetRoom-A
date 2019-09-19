@@ -117,7 +117,11 @@ const MainStack = createStackNavigator({
             header: null
         })
     },
-    FormHotel: { screen: FormHotel },
+    FormHotel: { screen: FormHotel,
+        navigationOptions: () => ({
+            header: null
+        })
+    },
     SettingRoom: { screen: SettingRoom },
     FormRoom: { screen: FormRoom },
     ViewRoomAct: { screen: ViewRoomAct },
