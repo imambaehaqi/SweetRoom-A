@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Right, Left, Content, List, Thumbnail, Text, ListItem, Body, Header, Title, Button, Icon, CardItem } from 'native-base'
+import { Container, Right, Left, Content, List, Thumbnail, Text, Body, Header, Title, Icon, CardItem } from 'native-base'
 import { TouchableOpacity } from 'react-native'
 
 export class MenuScreen extends Component {
