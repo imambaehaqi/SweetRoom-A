@@ -32,7 +32,7 @@ export default class CardHeaderFooterExample extends Component {
                         </ListItem>                    
                         <TouchableOpacity
                             onPress = {() => this.props.navigation.push('ViewRoomNonAct')}>                  
-                            <CardItem>
+                            <CardItem style = {{borderBottomWidth:0.3}}>
                                 <Left>
                                     <Text>Room</Text>
                                 </Left>

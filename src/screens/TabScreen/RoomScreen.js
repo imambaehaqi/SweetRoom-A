@@ -19,7 +19,9 @@ export class MenuScreen extends Component {
                     <List>
                         <TouchableOpacity 
                             onPress = {() => this.props.navigation.push('SettingRoom')}>
-                            <CardItem thumbnail>
+                            <CardItem thumbnail
+                                style = {{borderBottomWidth:0.3}}
+                            >
                                 <Left>
                                     <Thumbnail square source={{ uri: 'Image URL' }} />
                                 </Left>
@@ -34,7 +36,9 @@ export class MenuScreen extends Component {
                         </TouchableOpacity>
                         <TouchableOpacity 
                             onPress = {() => this.props.navigation.push('AvailibiltyRoom')}>
-                            <CardItem thumbnail>
+                            <CardItem thumbnail
+                                style = {{borderBottomWidth:0.3}}
+                            >
                                 <Left>
                                     <Thumbnail square source={{ uri: 'Image URL' }} />
                                 </Left>

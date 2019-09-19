@@ -14,6 +14,7 @@ import OrderScreen from '../screens/TabScreen/OrderScreen'
 import PaymentScreen from '../screens/TabScreen/PaymentScreen'
 import RoomScreen from '../screens/TabScreen/RoomScreen'
 import ChatScreen from '../screens/TabScreen/ChatScreen'
+import ChatListScreen from '../screens/ChatList'
 import SettingScreen from '../screens/TabScreen/SettingScreen'
 
 import FormHotel from '../components/FormHotel'
@@ -25,6 +26,7 @@ import EditRoom from '../components/EditRoom'
 import EditHotel from '../components/EditHotel'
 import AvailibiltyRoom from '../components/AvailibilityRoom'
 import RecheckRoom from '../components/RecheckRoom'
+import RecheckRoomStats from '../components/RecheckRoomStats'
 
 const AuthStack = createStackNavigator({
     Splash: { screen: SplashScreen,
@@ -38,6 +40,11 @@ const AuthStack = createStackNavigator({
         })
     },
     Register: { screen: RegisterScreen },
+    FormHotel: { screen: FormHotel,
+        navigationOptions: () => ({
+            header: null
+        })
+    },
 },{
     initialRouteName: 'Splash',
     defaultNavigationOptions: {
@@ -76,7 +83,7 @@ const MainTabs = createBottomTabNavigator({
         }
     },
     Chat: {
-        screen: ChatScreen,
+        screen: ChatListScreen,
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => (
                 <Icon type = 'MaterialIcons' name = 'chat-bubble-outline' style = {{fontSize: 22, color:`${tintColor}`}} />
@@ -94,7 +101,7 @@ const MainTabs = createBottomTabNavigator({
         }
     },
 },{
-    initialRouteName: 'Payment',
+    initialRouteName: 'Room',
     tabBarOptions: {
         activeTintColor: '#fbda91',
         inactiveTintColor: 'white',
@@ -118,7 +125,9 @@ const MainStack = createStackNavigator({
     EditRoom: { screen: EditRoom },
     EditHotel: { screen: EditHotel },
     AvailibiltyRoom: { screen: AvailibiltyRoom },
-    RecheckRoom: { screen: RecheckRoom }
+    RecheckRoom: { screen: RecheckRoom },
+    RecheckRoomStats: { screen: RecheckRoomStats },
+    ChatScreen: { screen: ChatScreen }
 },{
     // initialRouteName:'RecheckRoom'
 })
@@ -128,7 +137,7 @@ const AppNavigation = createSwitchNavigator({
     InitAuth: { screen: AuthStack },
     InitMain: { screen: MainStack}
 },{
-    initialRouteName:'InitMain'
+    // initialRouteName:'InitMain'
 })
 
 export default createAppContainer( AppNavigation )

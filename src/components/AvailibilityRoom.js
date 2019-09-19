@@ -13,11 +13,11 @@ export class MenuScreen extends Component {
             <Container>
                 <Content>
                     <List>
-                        <TouchableOpacity onPress = {() => this.props.navigation.push('SettingRoom')}>
+                        <TouchableOpacity onPress = {() => this.props.navigation.push('RecheckRoomStats')}>
                             <CardItem thumbnail>
                                 <Body>
                                     <Text>List Room Not Availibilty</Text>
-                                    <Text note numberOfLines={3}>Here you can find out the available rooms and update their status when the room is available again</Text>
+                                    <Text note numberOfLines={5}>Here you can find out the available rooms and update their status when the room is available again</Text>
                                 </Body>
                                 <Right>
                                     <Icon type="Ionicons" name="ios-arrow-forward" />
@@ -37,6 +37,9 @@ export class MenuScreen extends Component {
                                 </Right>
                             </CardItem>
                         </TouchableOpacity>
+                        <ListItem itemDivider>
+                            <Text></Text>
+                        </ListItem>
                     </List>
                 </Content>
             </Container>

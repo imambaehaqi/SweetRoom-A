@@ -1,34 +1,34 @@
 import React, { Component } from 'react'
-import { Container, Header, Content, Card, CardItem, Text, Body, Title } from "native-base"
+import { Container, Header, Content, Card, CardItem, Text, Body, Title, Left } from "native-base"
+import { GiftedChat } from 'react-native-gifted-chat'
 
 export class ChatScreen extends Component {
+    static navigationOptions = {
+        title: 'CHAT',
+        /* No more header config here! */
+    }
+
     render() {
         return (
             <Container>
                 <Header style = {{backgroundColor:'white'}}>
                     <Body>
                         <Title>
-                            <Text style = {{fontWeight:'bold'}}>
-                                Chat
-                            </Text>
+                            <Text style = {{fontWeight:'bold', fontSize:18}}>User Name Order</Text>
                         </Title>
                     </Body>
+                    <Left>
+                        <Text style = {{fontSize:12}}>online : offline</Text>
+                    </Left>
                 </Header>
                 <Content>
-                    <Card>
-                        <CardItem header>
-                            <Text>NativeBase</Text>
-                        </CardItem>
-                        <CardItem>
-                            <Body>
-                                <Text>
-                                </Text>
-                            </Body>
-                        </CardItem>
-                        <CardItem footer>
-                            <Text>GeekyAnts</Text>
-                        </CardItem>
-                    </Card>
+                    <GiftedChat
+                        // text={this.state.message}
+                        // onInputTextChanged={(val)=>{this.setState({message: val})}}
+                        // messages={this.state.messageList}
+                        // onSend={() => this.send()}
+                        // user={{_id : User.uid}}
+                    />
                 </Content>
             </Container>
         )

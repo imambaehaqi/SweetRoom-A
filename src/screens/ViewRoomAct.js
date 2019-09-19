@@ -35,7 +35,9 @@ export default class CardHeaderFooterExample extends Component {
                             <Text>Active</Text>
                         </ListItem>  
                         <TouchableOpacity onPress = {() => this.props.navigation.push('EditRoom')}>
-                            <CardItem thumbnail>
+                            <CardItem thumbnail
+                                style = {{borderBottomWidth:0.3}}
+                            >
                                 <Left>
                                     <Thumbnail square source={{ uri: 'Image URL' }} />
                                 </Left>

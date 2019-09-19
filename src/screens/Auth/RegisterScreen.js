@@ -9,6 +9,7 @@ export class RegisterScreen extends Component {
         title: 'REGISTER',
         /* No more header config here! */
     }
+    
     constructor(props){
         super(props)
         this.state = {
@@ -36,7 +37,7 @@ export class RegisterScreen extends Component {
         Axios.post('http://192.168.100.36:1010/user/mitra/', this.state.form)
             .then( async (res) => {
                 await AsyncStorage.setItem('token',  res.data.accessToken)
-                this.props.navigation.navigate('InitMain')
+                this.props.navigation.navigate('FormHotel')
             })
             .catch(err => console.warn(err))
     }
@@ -70,7 +71,8 @@ export class RegisterScreen extends Component {
                         <View style = {{paddingTop:20}}>
                             <Button
                                 style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
-                                onPress={ () => this.handleSubmit()}
+                                // onPress={ () => this.handleSubmit()}
+                                onPress = { () => this.props.navigation.replace('FormHotel')}
                             >
                                 <Text>REGISTER</Text>
                             </Button>
