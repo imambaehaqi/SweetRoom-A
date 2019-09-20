@@ -9,7 +9,8 @@ import { Container,
     Title, 
     Icon, 
     ListItem, 
-    Left } from "native-base"
+    Left,
+    Thumbnail } from "native-base"
 
 export default class CardHeaderFooterExample extends Component {
     state = {
@@ -44,20 +45,7 @@ export default class CardHeaderFooterExample extends Component {
                 <Content style={{paddingTop:10}}>
                     <ListItem thumbnail>
                         <Left>
-                            <Icon type="MaterialCommunityIcons" name="cash-marker"/>
-                        </Left>
-                        <Body>
-                            <Text>Rp. {}</Text>
-                            <Text note numberOfLines={1}>ORDER TICKET {}</Text>
-                            <Text note numberOfLines={1}>Price Rp. {}| Commission{}</Text>
-                        </Body>
-                        <Right>
-                            <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
-                        </Right>
-                    </ListItem>
-                    <ListItem thumbnail>
-                        <Left>
-                            <Icon type="MaterialCommunityIcons" name="cash"/>
+                            <Thumbnail square source={{ uri: 'https://image.freepik.com/free-vector/money-bag_16734-108.jpg' }} />
                         </Left>
                         <Body>
                             <Text>Rp. {}</Text>

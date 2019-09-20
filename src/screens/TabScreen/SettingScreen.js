@@ -48,9 +48,9 @@ export class SettingScreen extends Component {
                 </Header>
                 <Content>
                     <Card>
-                        <TouchableOpacity onPress = {() => this.props.navigation.push('EditHotel')}>
+                        <TouchableOpacity onPress = {() => this.props.navigation.push('EditProfile')}>
                             <CardItem header>
-                                <Text style = {{fontWeight:'bold'}}>HOTEL ASEP JAYA</Text>
+                                <Text style = {{fontWeight:'bold'}}>First Name{} and Last Name{}</Text>
                             </CardItem>
                             <CardItem>
                                 <Body>
@@ -80,12 +80,12 @@ export class SettingScreen extends Component {
                             </Right>
                         </ListItem>
                         <ListItem thumbnail
-                            onPress={ () => this.props.navigation.push('FormHotel') }>
+                            onPress={ () => this.props.navigation.push('ViewHotel') }>
                             <Left>
                                 <Icon type="FontAwesome5" name="hotel"/>
                             </Left>
                             <Body>
-                                <Text style = {{fontWeight:'bold', fontSize:16}}>Add Hotel</Text>
+                                <Text style = {{fontWeight:'bold', fontSize:16}}>List Hotel</Text>
                             </Body>
                             <Right>
                                 <Icon type="Ionicons" name="ios-arrow-forward" />

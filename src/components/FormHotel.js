@@ -9,13 +9,38 @@ import { Container,
   Text, 
   Title, 
   Right, 
-  Button } from "native-base"
-import { ScrollView } from 'react-native'
+  Button,
+  Icon, 
+  Content} from "native-base"
+import { ScrollView, View, TouchableOpacity } from 'react-native'
 
 import Axios from 'axios'
 import AsyncStorage from '@react-native-community/async-storage'
 
 export default class FormExample extends Component {
+  static navigationOptions = ({ navigation }) => {
+    return {
+        headerTitle: (
+            <View>
+                <Text style = {{fontWeight:'bold', fontSize:18}}>Add New Hotel</Text>
+            </View>
+        ),
+        headerLeft: (
+            <TouchableOpacity 
+                onPress={() => navigation.navigate('Setting')} style = {{padding:10}}>
+                <Icon name='arrow-back' />
+            </TouchableOpacity>
+        ),
+        headerRight: (
+          <TouchableOpacity onPress={() => navigation.navigate('Setting')} style = {{padding:10}}>
+              <Button disabled bordered>
+                  <Text>SAVE</Text>
+              </Button>
+          </TouchableOpacity>
+      )
+    }
+  }
+
   constructor(props){
       super(props)
       this.state = {
@@ -45,25 +70,10 @@ export default class FormExample extends Component {
 
   render() {
     return (
-      <Container >
-        <Header style = {{backgroundColor:'white'}}>
-          <Body>
-            <Title>
-              <Text style = {{fontWeight:'bold'}}>
-                YOUR HOTEL
-              </Text>
-            </Title>
-          </Body>
-          <Right>
-            <Button bordered danger
-                onPress={ () => this.handleSubmit()}>
-                <Text>SAVE</Text>
-            </Button>
-          </Right>
-        </Header>
-        <Container style = {{padding:20}}>
-          <ScrollView>
-            <Text style = {{fontWeight:'bold', fontSize:24}}>Please Completed for Your Hotel!</Text>
+      <Container style = {{padding:16}}>
+        <ScrollView>
+          <Text style = {{fontWeight:'bold', fontSize:24}}>Please Completed for Your Hotel!</Text>
+          <Content>
             <Form>
               <Item stackedLabel>
                 <Label>Hotel Name</Label>
@@ -75,10 +85,9 @@ export default class FormExample extends Component {
               </Item>
               <Item stackedLabel>
                 <Label>Address</Label>
-                <Input 
-                  multiline = {true}
-                  numberOfLines = {4}
-                  onChangeText={ value => this.handleForm('address', value) }/>
+                  <Input 
+                    multiline = {true}
+                    onChangeText={ value => this.handleForm('address', value) }/>
               </Item>
               <Item stackedLabel>
                 <Label>Zip Code</Label>
@@ -108,8 +117,8 @@ export default class FormExample extends Component {
                   <Input onChangeText={ value => this.handleForm('rate', value) }/>
               </Item>
             </Form>
-          </ScrollView>
-        </Container>
+          </Content>
+        </ScrollView>
       </Container>
     )
   }

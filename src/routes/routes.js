@@ -23,10 +23,12 @@ import SettingRoom from '../screens/SettingRoom'
 import ViewRoomAct from '../screens/ViewRoomAct'
 import ViewRoomNonAct from '../screens/ViewRoomNonAct'
 import EditRoom from '../components/EditRoom'
+import ViewHotel from '../screens/ViewHotel'
 import EditHotel from '../components/EditHotel'
 import AvailibiltyRoom from '../components/AvailibilityRoom'
 import RecheckRoom from '../components/RecheckRoom'
 import RecheckRoomStats from '../components/RecheckRoomStats'
+import EditProfile from '../screens/EditProfile'
 
 const AuthStack = createStackNavigator({
     Splash: { screen: SplashScreen,
@@ -96,7 +98,7 @@ const MainTabs = createBottomTabNavigator({
         }
     }
 },{
-    initialRouteName: 'Room',
+    initialRouteName: 'Order',
     tabBarOptions: {
         activeTintColor: '#fbda91',
         inactiveTintColor: 'white',
@@ -127,13 +129,11 @@ const MainStack = createStackNavigator({
     RecheckRoom: { screen: RecheckRoom },
     RecheckRoomStats: { screen: RecheckRoomStats },
     ChatScreen: { screen: ChatScreen },
-    FormHotel: { screen: FormHotel,
-        navigationOptions: () => ({
-            header: null
-        })
-    }
+    ViewHotel: { screen: ViewHotel },
+    FormHotel: { screen: FormHotel },
+    EditProfile: { screen: EditProfile }
 },{
-    initialRouteName:'FormHotel'
+    // initialRouteName:'EditProfile'
 })
 
 const AppNavigation = createSwitchNavigator({

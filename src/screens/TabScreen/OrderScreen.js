@@ -7,7 +7,7 @@ import { Tabs,
     Body, 
     Header, 
     Title, 
-    Right } from 'native-base'
+    Right, Icon } from 'native-base'
 
 export class OrderScreen extends Component {
     state = {
@@ -73,7 +73,8 @@ export class OrderScreen extends Component {
                             </Body>
                             <Right>
                                 <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
-                                <Text style={{fontSize:12}}>Status{}</Text>
+                                <Text style={{fontSize:14, color:'tomato'}}>Canceled</Text>
+                                <Icon type = "MaterialIcons" name = 'cancel'/>
                             </Right>
                         </ListItem>
                         <ListItem>
@@ -82,8 +83,9 @@ export class OrderScreen extends Component {
                                 <Text note numberOfLines={1}>Rp. {}, Room Number{}</Text>
                             </Body>
                             <Right>
-                                <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
-                                <Text style={{fontSize:12}}>Status{}</Text>
+                                <Text style={{fontSize:10, color:'grey'}}>{this.state.curTime}</Text>
+                                <Text style={{fontSize:14, color:'green'}}>Completed</Text>
+                                <Icon type = "MaterialIcons" name = 'check-circle'/>
                             </Right>
                         </ListItem>
                     </Tab>

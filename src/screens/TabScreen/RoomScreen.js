@@ -22,11 +22,11 @@ export class MenuScreen extends Component {
                             <CardItem thumbnail
                                 style = {{borderBottomWidth:0.3}}>
                                 <Left>
-                                    <Thumbnail square source={{ uri: 'Image URL' }} />
+                                    <Thumbnail square source={{ uri: 'https://image.freepik.com/free-vector/illustration-gears_53876-28521.jpg' }} />
                                 </Left>
                                 <Body>
                                     <Text style = {{fontWeight:'bold'}}>Setting Room</Text>
-                                    <Text note numberOfLines={2}>Its time to build a difference . .</Text>
+                                    <Text >Its time to build a difference . .</Text>
                                 </Body>
                                 <Right>
                                     <Icon type="Ionicons" name="ios-arrow-forward" />
@@ -38,7 +38,7 @@ export class MenuScreen extends Component {
                             <CardItem thumbnail
                                 style = {{borderBottomWidth:0.3}}>
                                 <Left>
-                                    <Thumbnail square source={{ uri: 'Image URL' }} />
+                                    <Thumbnail square source={{ uri: 'https://image.freepik.com/free-vector/characters-people-holding-time-management-concept_53876-32619.jpg' }} />
                                 </Left>
                                 <Body>
                                     <Text style = {{fontWeight:'bold'}}>Availibility Room</Text>
