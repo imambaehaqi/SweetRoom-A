@@ -30,13 +30,6 @@ export default class Profile extends Component {
                     onPress={() => navigation.navigate('Setting')} style = {{padding:10}}>
                     <Icon name='arrow-back' />
                 </TouchableOpacity>
-            ),
-            headerRight: (
-                <TouchableOpacity onPress={() => navigation.navigate('Setting')} style = {{padding:10}}>
-                    <Button disabled bordered>
-                        <Text>SAVE</Text>
-                    </Button>
-                </TouchableOpacity>
             )
         }
     }
@@ -94,7 +87,12 @@ export default class Profile extends Component {
                         <Label>Birthday</Label>
                         <Input placeholder = "BANGSAT"/>
                     </Item>
-                </Form> 
+                    <Button bordered danger 
+                        style = {{justifyContent:'center', marginTop:10}}
+                        onPress={ () => this.props.navigate.navigate('Setting')}>
+                        <Text>UPDATE</Text>
+                    </Button>
+                </Form>
             </View>
         </View>
         )

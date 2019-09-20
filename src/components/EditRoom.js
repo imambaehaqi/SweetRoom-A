@@ -18,15 +18,7 @@ export default class FormExample extends Component {
                     onPress={() => navigation.navigate('ViewRoomAct')} style = {{padding:10}}>
                     <Icon name='arrow-back' />
                 </TouchableOpacity>
-            ),
-            headerRight: (
-                <TouchableOpacity 
-                    onPress={() => navigation.navigate('ViewRoomAct')} style = {{padding:10}}>
-                    <Button disabled bordered>
-                        <Text>SAVE</Text>
-                    </Button>
-                </TouchableOpacity>
-            ),
+            )
         }
     }
 
@@ -59,6 +51,11 @@ export default class FormExample extends Component {
                             <Input />
                         </Item>
                     </Form>
+                    <Button bordered danger 
+                        style = {{justifyContent:'center', marginTop:10}}
+                        onPress={() => this.props.navigation.navigate('ViewRoom')}>
+                        <Text>UPDATE</Text>
+                    </Button>
             </Container>
         )
     }

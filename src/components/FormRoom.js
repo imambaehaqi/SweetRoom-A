@@ -119,7 +119,7 @@ export default class FormExample extends Component {
                                 <Input onChangeText = { value => this.handleForm('status', value)}/>
                             </Item>
                             <Button bordered danger 
-                                style = {{justifyContent:'center', marginBottom:10}}
+                                style = {{justifyContent:'center', marginTop:10}}
                                 onPress={ () => this.handleSubmit()}>
                                 <Text>SAVE</Text>
                             </Button>

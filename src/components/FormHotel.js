@@ -119,9 +119,9 @@ export default class FormExample extends Component {
             </Item>
           </Form>
           <Button bordered danger 
-            style = {{justifyContent:'center', marginBottom:10}}
+            style = {{justifyContent:'center', marginTop:10}}
             onPress={ () => this.handleSubmit()}>
-              <Text>SAVE</Text>
+            <Text>SAVE</Text>
           </Button>
         </ScrollView>
       </Container>
