@@ -27,9 +27,6 @@ import EditHotel from '../components/EditHotel'
 import AvailibiltyRoom from '../components/AvailibilityRoom'
 import RecheckRoom from '../components/RecheckRoom'
 import RecheckRoomStats from '../components/RecheckRoomStats'
-import AutoCompleteInput from '../components/AutoCompleteInput'
-import AutoCompleteListView from '../components/AutoCompleteListView'
-import LocationView from '../components/LocationView'
 
 const AuthStack = createStackNavigator({
     Splash: { screen: SplashScreen,
@@ -42,7 +39,7 @@ const AuthStack = createStackNavigator({
             header: null
         })
     },
-    Register: { screen: RegisterScreen },
+    Register: { screen: RegisterScreen }
 },{
     initialRouteName: 'Splash',
     defaultNavigationOptions: {
@@ -97,7 +94,7 @@ const MainTabs = createBottomTabNavigator({
             ),
             title: 'Setting'
         }
-    },
+    }
 },{
     initialRouteName: 'Room',
     tabBarOptions: {
@@ -134,12 +131,9 @@ const MainStack = createStackNavigator({
         navigationOptions: () => ({
             header: null
         })
-    },
-    LocationView: { screen: LocationView },
-    AutoCompleteInput: { screen: AutoCompleteInput },
-    AutoCompleteListView: { screen: AutoCompleteListView }
+    }
 },{
-    initialRouteName:'LocationView'
+    initialRouteName:'FormHotel'
 })
 
 const AppNavigation = createSwitchNavigator({

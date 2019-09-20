@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
 import { TouchableOpacity } from 'react-native'
-import { Container, Header, Content, Card, CardItem, Text, Body, Title, Left, Right, Button, Icon, Thumbnail, ListItem, List } from "native-base"
+import { Container, 
+    Header, 
+    Content, 
+    Card, 
+    CardItem, 
+    Text, 
+    Body, 
+    Title, 
+    Left, 
+    Right, 
+    Icon, 
+    ListItem, List } from "native-base"
 import AsyncStorage from '@react-native-community/async-storage'
 
 import SwitchExample from '../../components/switch_example'
@@ -69,8 +80,7 @@ export class SettingScreen extends Component {
                             </Right>
                         </ListItem>
                         <ListItem thumbnail
-                            onPress={ () => this.props.navigation.push('FormHotel') }
-                        >
+                            onPress={ () => this.props.navigation.push('FormHotel') }>
                             <Left>
                                 <Icon type="FontAwesome5" name="hotel"/>
                             </Left>
@@ -93,8 +103,12 @@ export class SettingScreen extends Component {
                             </Right>
                         </ListItem>
                     </List>
-                    <Text style = {{paddingTop:10, textAlign:'center', color:'gray', fontSize:11}}>Version No. SWEETROOM Stagging v1.0.0</Text>
-                    <TouchableOpacity onPress={() => this.logOut()}><Text style = {{textAlign:'center', paddingTop:25, color:'tomato', fontWeight:'bold'}}>LOGOUT</Text></TouchableOpacity>
+                    <Text style = {{paddingTop:10, textAlign:'center', color:'gray', fontSize:11}}>
+                        Version No. SWEETROOM Stagging v1.0.0
+                    </Text>
+                    <TouchableOpacity onPress={() => this.logOut()}>
+                        <Text style = {{textAlign:'center', paddingTop:25, color:'tomato', fontWeight:'bold'}}>LOGOUT</Text>
+                    </TouchableOpacity>
                 </Content>
             </Container>
         )

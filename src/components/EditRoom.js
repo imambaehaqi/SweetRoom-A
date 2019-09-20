@@ -1,5 +1,12 @@
-import React, { Component } from "react";
-import { Container, Fab, Label, Form, Item, Input, Icon, Button, Text } from "native-base"
+import React, { Component } from "react"
+import { Container, 
+    Label, 
+    Form, 
+    Item, 
+    Input, 
+    Icon,
+    Button, 
+    Text } from "native-base"
 import { TouchableOpacity } from 'react-native'
 
 export default class FormExample extends Component {
@@ -7,12 +14,14 @@ export default class FormExample extends Component {
         return {
             headerTitle: 'Edit Room',
             headerLeft: (
-                <TouchableOpacity onPress={() => navigation.navigate('ViewRoomAct')} style = {{padding:10}}>
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate('ViewRoomAct')} style = {{padding:10}}>
                     <Icon name='arrow-back' />
                 </TouchableOpacity>
             ),
             headerRight: (
-                <TouchableOpacity onPress={() => navigation.navigate('ViewRoomAct')} style = {{padding:10}}>
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate('ViewRoomAct')} style = {{padding:10}}>
                     <Button disabled bordered>
                         <Text>SAVE</Text>
                     </Button>

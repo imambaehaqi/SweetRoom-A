@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
-import { Container, Right, Left, Content, List, Thumbnail, Text, ListItem, Body, Header, Title, Button, Icon, CardItem } from 'native-base'
+import { Container, 
+    Right, 
+    Left, 
+    Content, 
+    List, 
+    Text, 
+    ListItem, 
+    Body, 
+    Icon, 
+    CardItem } from 'native-base'
 import { TouchableOpacity } from 'react-native'
 
 export class MenuScreen extends Component {
     static navigationOptions = {
         title: 'Availibilty Room', 
-        /* No more header config here! */
     }
 
     render() {

@@ -7,7 +7,6 @@ import { ScrollView, View } from 'react-native'
 export class RegisterScreen extends Component {
     static navigationOptions = {
         title: 'REGISTER',
-        /* No more header config here! */
     }
     
     constructor(props){
@@ -22,15 +21,9 @@ export class RegisterScreen extends Component {
         newFormData[type] = value
         if ( value.length > 1 ) {
             this.setState({
-                form: newFormData,
+                form: newFormData
             })
-            // if ( type == 'password') {
-            //     this.setState({
-            //         send: true
-            //     })
-            // }
         }
-        // if ( value.length < 1 ) { this.setState({ send: false })}
     }
 
     handleSubmit = () => {
@@ -49,7 +42,7 @@ export class RegisterScreen extends Component {
                 <ScrollView style = {{padding:20}}>
                     <Text style = {{fontWeight:'bold', fontSize:24}}>Welcome to SweetRoom Partner</Text>
                     <Form>
-                    <Item stackedLabel >
+                        <Item stackedLabel >
                             <Label style = {{color:'gray'}}>First Name</Label>
                             <Input onChangeText={ value => this.handleForm('first_name', value) }/>
                         </Item>
@@ -72,9 +65,7 @@ export class RegisterScreen extends Component {
                         <View style = {{paddingTop:20}}>
                             <Button
                                 style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
-                                onPress={ () => this.handleSubmit()}
-                                // onPress = { () => this.props.navigation.replace('FormHotel')}
-                            >
+                                onPress={ () => this.handleSubmit()}>
                                 <Text>REGISTER</Text>
                             </Button>
                         </View>

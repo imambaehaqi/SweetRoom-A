@@ -20,8 +20,7 @@ export class MenuScreen extends Component {
                         <TouchableOpacity 
                             onPress = {() => this.props.navigation.push('SettingRoom')}>
                             <CardItem thumbnail
-                                style = {{borderBottomWidth:0.3}}
-                            >
+                                style = {{borderBottomWidth:0.3}}>
                                 <Left>
                                     <Thumbnail square source={{ uri: 'Image URL' }} />
                                 </Left>
@@ -37,8 +36,7 @@ export class MenuScreen extends Component {
                         <TouchableOpacity 
                             onPress = {() => this.props.navigation.push('AvailibiltyRoom')}>
                             <CardItem thumbnail
-                                style = {{borderBottomWidth:0.3}}
-                            >
+                                style = {{borderBottomWidth:0.3}}>
                                 <Left>
                                     <Thumbnail square source={{ uri: 'Image URL' }} />
                                 </Left>
@@ -47,7 +45,7 @@ export class MenuScreen extends Component {
                                     <Text note numberOfLines={2}>Its time to build a difference . .</Text>
                                 </Body>
                                 <Right>
-                                        <Icon type="Ionicons" name="ios-arrow-forward" />
+                                    <Icon type="Ionicons" name="ios-arrow-forward" />
                                 </Right>
                             </CardItem>
                         </TouchableOpacity>

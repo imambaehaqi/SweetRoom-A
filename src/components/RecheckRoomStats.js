@@ -47,14 +47,7 @@ export class RecheckRoom extends Component {
                 <TouchableOpacity onPress={() => navigation.navigate('AvailibiltyRoom')} style = {{padding:10}}>
                     <Icon name='arrow-back' />
                 </TouchableOpacity>
-            ),
-            // headerRight: (
-            //     <TouchableOpacity onPress={() => navigation.navigate('EditDetailHotel')} style = {{padding:10}}>
-            //         <Button bordered danger>
-            //             <Text>EDIT</Text>
-            //         </Button>
-            //     </TouchableOpacity>
-            // ),
+            )
         }
     }
 }

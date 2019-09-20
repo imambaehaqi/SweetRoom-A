@@ -1,6 +1,15 @@
-import React, { Component } from "react";
-import { Container, Header, Content, Right, Button, Text, Body, Title, Icon, ListItem, Left } from "native-base"
-import { TouchableOpacity } from 'react-native'
+import React, { Component } from "react"
+import { Container, 
+    Header, 
+    Content, 
+    Right, 
+    Button, 
+    Text, 
+    Body, 
+    Title, 
+    Icon, 
+    ListItem, 
+    Left } from "native-base"
 
 export default class CardHeaderFooterExample extends Component {
     state = {
@@ -12,7 +21,7 @@ export default class CardHeaderFooterExample extends Component {
             this.setState({
             curTime : new Date().toLocaleString()
             })
-        },1000)
+        }, 1000)
     }
 
     render() {
@@ -33,7 +42,7 @@ export default class CardHeaderFooterExample extends Component {
                     </Right>
                 </Header>
                 <Content style={{paddingTop:10}}>
-                        <ListItem thumbnail>
+                    <ListItem thumbnail>
                         <Left>
                             <Icon type="MaterialCommunityIcons" name="cash-marker"/>
                         </Left>
@@ -45,20 +54,20 @@ export default class CardHeaderFooterExample extends Component {
                         <Right>
                             <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
                         </Right>
-                        </ListItem>
-                        <ListItem thumbnail>
-                            <Left>
-                                <Icon type="MaterialCommunityIcons" name="cash"/>
-                            </Left>
-                            <Body>
-                                <Text>Rp. {}</Text>
-                                <Text note numberOfLines={1}>ORDER TICKET {}</Text>
-                                <Text note numberOfLines={1}>Price Rp. {}| Commission{}</Text>
-                            </Body>
-                            <Right>
-                                <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
-                            </Right>
-                        </ListItem>
+                    </ListItem>
+                    <ListItem thumbnail>
+                        <Left>
+                            <Icon type="MaterialCommunityIcons" name="cash"/>
+                        </Left>
+                        <Body>
+                            <Text>Rp. {}</Text>
+                            <Text note numberOfLines={1}>ORDER TICKET {}</Text>
+                            <Text note numberOfLines={1}>Price Rp. {}| Commission{}</Text>
+                        </Body>
+                        <Right>
+                            <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>
+                        </Right>
+                    </ListItem>
                 </Content>
             </Container>
         )

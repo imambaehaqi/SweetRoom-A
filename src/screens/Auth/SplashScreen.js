@@ -13,12 +13,10 @@ export class SplashScreen extends Component {
     }
 
     async componentDidMount() {
-        // Preload data from an external API
-        // Preload data using AsyncStorage
-        const data = await this.performTimeConsumingTask();
+        const data = await this.performTimeConsumingTask()
 
         if (data !== null) {
-            this.props.navigation.replace('Login');
+            this.props.navigation.replace('Login')
         }
     }
 

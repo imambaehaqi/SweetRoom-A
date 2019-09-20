@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
-import { Tabs, Tab, Text, ListItem, Container, Body, Header, Title, Right, CardItem, Content } from 'native-base'
+import { Text, 
+    Container, 
+    Body, 
+    Header, 
+    Title, 
+    Right, 
+    CardItem, 
+    Content } from 'native-base'
 import { TouchableOpacity } from 'react-native'
 
 export class OrderScreen extends Component {
@@ -12,7 +19,7 @@ export class OrderScreen extends Component {
             this.setState({
             curTime : new Date().toLocaleString()
             })
-        },1000)
+        }, 1000)
     }
 
     render() {
@@ -30,8 +37,7 @@ export class OrderScreen extends Component {
                 <Content>
                     <TouchableOpacity onPress = {() => this.props.navigation.push('ChatScreen')}>
                         <CardItem 
-                            style = {{borderBottomWidth:0.3}}
-                        >
+                            style = {{borderBottomWidth:0.3}}>
                             <Body>
                                 <Text>User Order{}</Text>
                                 <Text note numberOfLines={1}>Rp. {}, Room Number{}</Text>

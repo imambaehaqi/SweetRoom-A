@@ -1,11 +1,18 @@
-import React, { Component } from "react";
-import { Container, Fab, Content, Card, CardItem, Text, Body, Icon, List, ListItem, Left, Button, Thumbnail, Right, Item, Label } from "native-base"
-import { TouchableHighlight, TouchableOpacity } from "react-native";
+import React, { Component } from "react"
+import { Container, 
+    Content, 
+    CardItem, 
+    Text, 
+    Icon, 
+    List, 
+    ListItem, 
+    Left, 
+    Right } from "native-base"
+import { TouchableOpacity } from "react-native"
 
 export default class CardHeaderFooterExample extends Component {
     static navigationOptions = {
-        title: 'Setting Room', 
-        /* No more header config here! */
+        title: 'Setting Room'
     }
 
     render() {

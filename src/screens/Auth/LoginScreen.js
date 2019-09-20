@@ -1,5 +1,14 @@
 import React, { Component } from 'react'
-import { Header, Title, Body, Container, Text, Form, Item, Label, Input, Button } from 'native-base'
+import { Header, 
+    Title, 
+    Body, 
+    Container, 
+    Text, 
+    Form, 
+    Item, 
+    Label, 
+    Input, 
+    Button } from 'native-base'
 import Axios from 'axios'
 import AsyncStorage from '@react-native-community/async-storage'
 
@@ -76,16 +85,13 @@ export class LoginScreen extends Component {
                             <Button 
                                 style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
                                 active={false}
-                                onPress={ () => this.submitForm()}
-                                // onPress = {() => this.props.navigation.navigate('InitMain')}
-                            >
+                                onPress={ () => this.submitForm()}>
                                 <Text>LOGIN</Text>
                             </Button>
                             <Text style = {{fontWeight:'bold', textAlign:'center', padding:7, fontSize:14, color:'gray'}}>Or</Text>
                             <Button 
                                 style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
-                                onPress={ () => this.props.navigation.push('Register') }
-                            >
+                                onPress={ () => this.props.navigation.push('Register') }>
                                 <Text>REGISTER</Text>
                             </Button>
                             <Text style = {{textAlign:'center', color:'gray', fontSize:9, paddingTop:10}}>©Team 2 || Bootcamp Arkademy || Batch 11</Text>

@@ -4,8 +4,7 @@ import { GiftedChat } from 'react-native-gifted-chat'
 
 export class ChatScreen extends Component {
     static navigationOptions = {
-        title: 'CHAT',
-        /* No more header config here! */
+        title: 'CHAT'
     }
 
     render() {

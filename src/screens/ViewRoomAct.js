@@ -1,5 +1,16 @@
-import React, { Component } from "react";
-import { Container, Fab, Content, Card, CardItem, Text, Body, Icon, Title, ListItem, Left, Button, Thumbnail, Right, Header, Subtitle, List } from "native-base"
+import React, { Component } from "react"
+import { Container, 
+    Content, 
+    CardItem, 
+    Text, 
+    Body, 
+    Icon, 
+    ListItem, 
+    Left, 
+    Button, 
+    Thumbnail, 
+    Right, 
+    List } from "native-base"
 import { TouchableOpacity, View } from 'react-native'
 
 export default class CardHeaderFooterExample extends Component {
@@ -12,17 +23,11 @@ export default class CardHeaderFooterExample extends Component {
                 </View>
             ),
             headerLeft: (
-                <TouchableOpacity onPress={() => navigation.navigate('SettingRoom')} style = {{padding:10}}>
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate('SettingRoom')} style = {{padding:10}}>
                     <Icon name='arrow-back' />
                 </TouchableOpacity>
-            ),
-            // headerRight: (
-            //     <TouchableOpacity onPress={() => navigation.navigate('EditDetailHotel')} style = {{padding:10}}>
-            //         <Button bordered danger>
-            //             <Text>EDIT</Text>
-            //         </Button>
-            //     </TouchableOpacity>
-            // ),
+            )
         }
     }
     
@@ -36,8 +41,7 @@ export default class CardHeaderFooterExample extends Component {
                         </ListItem>  
                         <TouchableOpacity onPress = {() => this.props.navigation.push('EditRoom')}>
                             <CardItem thumbnail
-                                style = {{borderBottomWidth:0.3}}
-                            >
+                                style = {{borderBottomWidth:0.3}}>
                                 <Left>
                                     <Thumbnail square source={{ uri: 'Image URL' }} />
                                 </Left>
@@ -53,8 +57,7 @@ export default class CardHeaderFooterExample extends Component {
                     </List>
                 </Content>
                 <Button block danger
-                    onPress = {() => this.props.navigation.push('FormRoom')}
-                >
+                    onPress = {() => this.props.navigation.push('FormRoom')}>
                     <Text>Add Room</Text>
                 </Button>
             </Container>

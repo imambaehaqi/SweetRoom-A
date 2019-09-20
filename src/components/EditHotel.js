@@ -1,5 +1,12 @@
 import React, { Component } from "react"
-import { Container, Button, Text, Form, Item, Input, Label, Icon } from "native-base"
+import { Container, 
+    Button, 
+    Text, 
+    Form, 
+    Item, 
+    Input, 
+    Label, 
+    Icon } from "native-base"
 import { TouchableOpacity } from 'react-native'
 
 export default class FormExample extends Component {

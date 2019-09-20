@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         padding: 20
     },
     buttonContainer: {
-        backgroundColor: '#fb8691',
+        backgroundColor: '#fb8691'
     }
 })
 
