@@ -74,7 +74,7 @@ const MainTabs = createBottomTabNavigator({
         screen: RoomScreen,
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => (
-                <Icon type = 'Entypo' name = 'add-to-list' style = {{fontSize: 22, color:`${tintColor}`}} />
+                <Icon type = 'MaterialCommunityIcons' name = 'room-service-outline' style = {{fontSize: 22, color:`${tintColor}`}} />
             ),
             title: 'Room',
         }
@@ -98,7 +98,7 @@ const MainTabs = createBottomTabNavigator({
         }
     }
 },{
-    initialRouteName: 'Order',
+    initialRouteName: 'Room',
     tabBarOptions: {
         activeTintColor: '#fbda91',
         inactiveTintColor: 'white',
@@ -114,11 +114,7 @@ const MainStack = createStackNavigator({
             header: null
         })
     },
-    FormHotel: { screen: FormHotel,
-        navigationOptions: () => ({
-            header: null
-        })
-    },
+    FormHotel: { screen: FormHotel },
     SettingRoom: { screen: SettingRoom },
     FormRoom: { screen: FormRoom },
     ViewRoomAct: { screen: ViewRoomAct },
@@ -130,10 +126,9 @@ const MainStack = createStackNavigator({
     RecheckRoomStats: { screen: RecheckRoomStats },
     ChatScreen: { screen: ChatScreen },
     ViewHotel: { screen: ViewHotel },
-    FormHotel: { screen: FormHotel },
     EditProfile: { screen: EditProfile }
 },{
-    // initialRouteName:'EditProfile'
+    // initialRouteName:'FormHotel'
 })
 
 const AppNavigation = createSwitchNavigator({

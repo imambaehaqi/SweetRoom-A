@@ -56,7 +56,8 @@ export default class CardHeaderFooterExample extends Component {
                         </TouchableOpacity>
                     </List>
                 </Content>
-                <Button block danger
+                <Button bordered danger
+                    style = {{justifyContent:'center'}}
                     onPress = {() => this.props.navigation.push('FormRoom')}>
                     <Text>Add Room</Text>
                 </Button>

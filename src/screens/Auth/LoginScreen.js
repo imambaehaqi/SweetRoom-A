@@ -25,7 +25,8 @@ export class LoginScreen extends Component {
             send: false,
             errorMitra: false,
             errorUserNotFound: false,
-            errorWrongPass: false
+            errorWrongPass: false,
+            showToast: false
         }
     }
 
@@ -69,10 +70,6 @@ export class LoginScreen extends Component {
                 this.props.navigation.navigate('InitMain')
             } else if (res.data.status === 200 && res.data.result[0].level == 'user') {
                 this.setState({ errorMitra: true })
-                Toast.show({
-                    text: "Wrong password!",
-                    buttonText: "Okay"
-                })
             } else if (res.data.status === 402) {
                 this.setState({ errorWrongPass: true })
             } else if (res.data.status === 401) {
@@ -81,8 +78,9 @@ export class LoginScreen extends Component {
         })
         .catch(err => console.warn(err))
         Toast.show({
-            text: "Please input email and password",
-            buttonText: "Okay"
+            text: "Wrong password!",
+            buttonText: "Okay",
+            position: "top"
         })
     }
     

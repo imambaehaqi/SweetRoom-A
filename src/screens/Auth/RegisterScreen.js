@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Text, Form, Item, Input, Button, Label } from 'native-base'
+import { Container, Text, Form, Item, Input, Button, Label, Toast } from 'native-base'
 import Axios from 'axios'
 import AsyncStorage from '@react-native-community/async-storage'
 import { ScrollView, View } from 'react-native'
@@ -12,7 +12,8 @@ export class RegisterScreen extends Component {
     constructor(props){
         super(props)
         this.state = {
-            form: {}
+            form: {},
+            showToast: false
         }
     }
 
@@ -34,6 +35,11 @@ export class RegisterScreen extends Component {
                 console.warn(res.data)
             })
             .catch(err => console.warn(err))
+            Toast.show({
+                text: "PASSWORD SALAHA ",
+                buttonText: "Okay",
+                position: "top"
+            })
     }
 
     render() {

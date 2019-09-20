@@ -49,8 +49,8 @@ export default class CardHeaderFooterExample extends Component {
                         </Left>
                         <Body>
                             <Text>Rp. {}</Text>
-                            <Text note numberOfLines={1}>ORDER TICKET {}</Text>
-                            <Text note numberOfLines={1}>Price Rp. {}| Commission{}</Text>
+                            <Text note numberOfLines={1} style={{fontSize:12}}>ORDER TICKET {}</Text>
+                            <Text note numberOfLines={1} style={{fontSize:10}}>Price Rp. {}| Commission{}</Text>
                         </Body>
                         <Right>
                             <Text style={{fontSize:9, color:'grey'}}>{this.state.curTime}</Text>

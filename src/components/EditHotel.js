@@ -14,12 +14,12 @@ export default class FormExample extends Component {
         return {
             headerTitle: 'Edit Hotel',
             headerLeft: (
-                <TouchableOpacity onPress={() => navigation.navigate('Setting')} style = {{padding:10}}>
+                <TouchableOpacity onPress={() => navigation.navigate('ViewHotel')} style = {{padding:10}}>
                     <Icon name='arrow-back' />
                 </TouchableOpacity>
             ),
             headerRight: (
-                <TouchableOpacity onPress={() => navigation.navigate('Setting')} style = {{padding:10}}>
+                <TouchableOpacity onPress={() => navigation.navigate('ViewHotel')} style = {{padding:10}}>
                     <Button disabled bordered>
                         <Text>SAVE</Text>
                     </Button>
