@@ -47,7 +47,7 @@ export class SettingScreen extends Component {
                     </Body>
                 </Header>
                 <Content>
-                    <Card>
+                    {/* <Card>
                         <TouchableOpacity onPress = {() => this.props.navigation.push('EditProfile')}>
                             <CardItem header>
                                 <Text style = {{fontWeight:'bold'}}>First Name{} and Last Name{}</Text>
@@ -64,9 +64,9 @@ export class SettingScreen extends Component {
                                 <Text style = {{color:'grey'}}>iambaehaqi@gmail.com</Text>
                             </CardItem>
                         </TouchableOpacity>
-                    </Card>
+                    </Card> */}
                     <List>
-                        <ListItem thumbnail>
+                        {/* <ListItem thumbnail>
                             <Left>
                                 <Icon type="MaterialCommunityIcons" name="home-city-outline"/>
                             </Left>
@@ -78,20 +78,8 @@ export class SettingScreen extends Component {
                                     toggleSwitch1 = {this.toggleSwitch1}
                                     switch1Value = {this.state.switch1Value}/>
                             </Right>
-                        </ListItem>
-                        <ListItem thumbnail
-                            onPress={ () => this.props.navigation.push('ViewHotel') }>
-                            <Left>
-                                <Icon type="FontAwesome5" name="hotel"/>
-                            </Left>
-                            <Body>
-                                <Text style = {{fontWeight:'bold', fontSize:16}}>List Hotel</Text>
-                            </Body>
-                            <Right>
-                                <Icon type="Ionicons" name="ios-arrow-forward" />
-                            </Right>
-                        </ListItem>
-                        <ListItem thumbnail>
+                        </ListItem> */}
+                        {/* <ListItem thumbnail>
                             <Left>
                                 <Icon type="FontAwesome" name="qrcode"/>
                             </Left>
@@ -101,7 +89,7 @@ export class SettingScreen extends Component {
                             <Right>
                                 <Icon type="Ionicons" name="ios-arrow-forward" />
                             </Right>
-                        </ListItem>
+                        </ListItem> */}
                     </List>
                     <Text style = {{paddingTop:10, textAlign:'center', color:'gray', fontSize:11}}>
                         Version No. SWEETROOM Stagging v1.0.0

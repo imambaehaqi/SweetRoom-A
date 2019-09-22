@@ -16,6 +16,7 @@ import AsyncStorage from '@react-native-community/async-storage'
 import firebase from 'firebase'
 
 import IsAuth from '../../components/IsAuth'
+import {URL} from '../configs'
 
 export class LoginScreen extends Component {
     constructor(props) {
@@ -59,7 +60,7 @@ export class LoginScreen extends Component {
     }
 
     submitForm = () => {
-        Axios.post('http://192.168.100.36:1010/user/login/', this.state.form)
+        Axios.post(`${URL}/user/login`, this.state.form)
         .then( async (res) => {
             if (res.data.status === 200 && res.data.result[0].level == 'mitra' ) {
                 await AsyncStorage.setItem('token', res.data.accessToken)
@@ -121,7 +122,7 @@ export class LoginScreen extends Component {
                             <Text style = {{fontWeight:'bold', textAlign:'center', padding:7, fontSize:14, color:'gray'}}>Or</Text>
                             <Button 
                                 style={{ backgroundColor: '#fb8691', alignItems:'center', justifyContent:'center' }}
-                                onPress={ () => this.props.navigation.push('Register') }>
+                                onPress={ () => this.props.navigation.push('SignUp') }>
                                 <Text>REGISTER</Text>
                             </Button>
                             <Text style = {{textAlign:'center', color:'gray', fontSize:9, paddingTop:10}}>©Team 2 || Bootcamp Arkademy || Batch 11</Text>

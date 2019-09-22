@@ -12,13 +12,14 @@ import { ScrollView, TouchableOpacity } from 'react-native'
 
 import Axios from 'axios'
 import AsyncStorage from '@react-native-community/async-storage'
+import {URL} from '../screens/configs'
 
 export default class FormExample extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       headerTitle: 'Add New Hotel',
       headerLeft: (
-          <TouchableOpacity onPress={() => navigation.navigate('ViewHotel')} style = {{padding:10}}>
+          <TouchableOpacity onPress={() => navigation.navigate('Room')} style = {{padding:10}}>
               <Icon name='arrow-back' />
           </TouchableOpacity>
       )
@@ -45,9 +46,9 @@ export default class FormExample extends Component {
   }
 
   handleSubmit = () => {
-    Axios.post('http://192.168.100.36:1010/hotel/', this.state.form)
+    Axios.post(`${URL}/hotel/`, this.state.form)
       .then(res => {
-        this.props.navigation.navigate('ViewHotel')
+        this.props.navigation.navigate('Room')
         console.warn('brerhasil',res)
         Toast.show({
           text: 'SUCCES BANG'
@@ -56,7 +57,7 @@ export default class FormExample extends Component {
       .catch(err => {
         console.warn(err)
         Toast.show({
-          text:'ISIEN SEK'
+          text:'Field not found'
         })
       })
   }

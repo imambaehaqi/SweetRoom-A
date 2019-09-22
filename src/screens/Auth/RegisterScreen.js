@@ -28,7 +28,7 @@ export class RegisterScreen extends Component {
     }
 
     handleSubmit = () => {
-        Axios.post('http://192.168.100.36:1010/user/mitra/', this.state.form)
+        Axios.post('https://sweetappbackend.herokuapp.com/user/mitra/', this.state.form)
             .then( async (res) => {
                 await AsyncStorage.setItem('token', res.data.accessToken)
                 this.props.navigation.navigate('InitMain')
@@ -36,7 +36,7 @@ export class RegisterScreen extends Component {
             })
             .catch(err => console.warn(err))
             Toast.show({
-                text: "PASSWORD SALAHA ",
+                text: "Please input field",
                 buttonText: "Okay",
                 position: "top"
             })

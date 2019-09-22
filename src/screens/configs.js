@@ -1,0 +1,1 @@
+export const URL = 'http://sweetappbackend.herokuapp.com' // http://sweetappbackend.herokuapp.com

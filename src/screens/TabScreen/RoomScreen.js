@@ -17,19 +17,19 @@ export class MenuScreen extends Component {
                 </Header>
                 <Content style={{paddingTop:10}}>
                     <ListItem thumbnail
-                        onPress = {() => this.props.navigation.push('SettingRoom')}>
+                        onPress = {() => this.props.navigation.push('ViewHotel')}>
                         <Left>
-                            <Thumbnail square source={{ uri: 'https://image.freepik.com/free-vector/illustration-gears_53876-28521.jpg' }} />
+                            <Thumbnail square source={{ uri: 'https://img.freepik.com/free-vector/modern-city-buildings_1441-3039.jpg?size=626&ext=jpg' }} />
                         </Left>
                         <Body>
-                            <Text style = {{fontWeight:'bold'}}>Setting Room</Text>
+                            <Text style = {{fontWeight:'bold'}}>List Hotel</Text>
                             <Text note numberOfLines={2}>Its time to build a difference . .</Text>
                         </Body>
                         <Right>
                             <Icon type="Ionicons" name="ios-arrow-forward" />
                         </Right>
                     </ListItem>
-                    <ListItem thumbnail
+                    {/* <ListItem thumbnail
                         onPress = {() => this.props.navigation.push('AvailibiltyRoom')}>
                         <Left>
                             <Thumbnail square source={{ uri: 'https://image.freepik.com/free-vector/characters-people-holding-time-management-concept_53876-32619.jpg' }} />
@@ -41,7 +41,7 @@ export class MenuScreen extends Component {
                         <Right>
                             <Icon type="Ionicons" name="ios-arrow-forward" />
                         </Right>
-                    </ListItem>
+                    </ListItem> */}
                 </Content>
             </Container>
         )
