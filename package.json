@@ -10,7 +10,7 @@
   "dependencies": {
     "@livechat/ui-kit": "^0.4.0-5",
     "@react-native-community/async-storage": "^1.6.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "firebase": "^6.6.2",
     "native-base": "^2.13.8",
     "react": "16.8.6",
